@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsvmso1bipe61"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_akgik"]
+size = Vector3(60, 0.1, 60)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_is3sw"]
+points = PackedVector3Array(30.4762, 0.42619, 30.4762, -30.4762, -0.52619, -30.4762, -30.4762, 0.42619, -30.4762, 30.4762, -0.52619, -30.4762, -30.4762, -0.52619, 30.4762, -30.4762, 0.42619, 30.4762, 30.4762, 0.42619, -30.4762, 30.4762, -0.52619, 30.4762)
+
+[node name="World" type="Node3D"]
+
+[node name="Ground 1" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground 1"]
+mesh = SubResource("BoxMesh_akgik")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground 1"]
+shape = SubResource("ConvexPolygonShape3D_is3sw")
+
+[node name="Walls" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1662, 2.8081, 19.1118)
+use_collision = true
+radius = 6.49581
+height = 10.0
+sides = 6
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1145, 0, 19.976)
+use_collision = true
+radius = 4.85097
+height = 7.0
