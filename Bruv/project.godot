@@ -16,4 +16,4 @@ config/icon="res://Images/icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/terrain_editor/plugin.cfg")
+enabled=PackedStringArray()
