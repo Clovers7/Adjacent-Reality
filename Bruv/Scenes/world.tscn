@@ -344,7 +344,7 @@ height = 13.349
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls20" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(0.160415, 0, -0.98705, 0, 1, 0, 0.98705, 0, 0.160415, -24.2844, 4.59048, 56.9597)
+transform = Transform3D(0.160415, 0, -0.98705, 0, 1, 0, 0.98705, 0, 0.160415, -22.6203, 4.66184, 56.9597)
 use_collision = true
 radius = 7.379
 height = 13.349
@@ -358,7 +358,7 @@ height = 10.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls21" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(-0.990842, 0, -0.135024, 0, 1, 0, 0.135024, 0, -0.990842, -38.4937, 6.6147, 55.9069)
+transform = Transform3D(-0.990842, 0, -0.135024, 0, 1, 0, 0.135024, 0, -0.990842, -38.9087, 6.6147, 54.8326)
 use_collision = true
 radius = 7.379
 height = 13.349
@@ -500,4 +500,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.4624, 0.271243, -20.5378)
 use_collision = true
 radius = 7.379
 height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Wall20" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(0.160415, 0, -0.98705, 0, 1, 0, 0.98705, 0, 0.160415, -32.8612, 9.28539, 57.9152)
+use_collision = true
+radius = 7.379
+height = 3.0
 material = SubResource("StandardMaterial3D_ub8x5")
