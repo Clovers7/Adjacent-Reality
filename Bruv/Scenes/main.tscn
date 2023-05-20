@@ -4,16 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://bvka5tk3ijs4h" path="res://Scenes/connector.tscn" id="2_p1bfv"]
 [ext_resource type="PackedScene" uid="uid://d1b5yj5sio6d6" path="res://Scenes/player.tscn" id="3_und52"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_18eve"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nn3q8"]
+sky_top_color = Color(0.737255, 0, 0.282353, 1)
+sky_horizon_color = Color(0.894118, 0.580392, 0, 1)
+sky_curve = 0.130583
 
-[sub_resource type="Sky" id="Sky_2tqvo"]
-sky_material = SubResource("ShaderMaterial_18eve")
+[sub_resource type="Sky" id="Sky_x385r"]
+sky_material = SubResource("ProceduralSkyMaterial_nn3q8")
+radiance_size = 1
 
 [sub_resource type="Environment" id="Environment_dx1ex"]
 background_mode = 2
-sky = SubResource("Sky_2tqvo")
+sky = SubResource("Sky_x385r")
 ambient_light_source = 3
-ambient_light_color = Color(0.960784, 0.843137, 0.909804, 1)
+ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.71
 ambient_light_energy = 2.58
 reflected_light_source = 2
@@ -34,8 +38,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.158782, -50.4671)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.11122, -0.426674)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.82537, 2.46791e-08, -0.564593, 0.564593, -3.60781e-08, 0.82537, 0, -1, -4.37114e-08, -53.7928, 56.2584, -6.09007)
-light_energy = 1.646
+transform = Transform3D(0.707107, 1.28028e-08, -0.707107, 0.707107, -3.09086e-08, 0.707107, -1.28028e-08, -1, -3.09086e-08, -33.2622, 56.2584, -6.09007)
+shadow_normal_bias = 1.091
+shadow_transmittance_bias = -7.384
+shadow_blur = 6.354
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.749846, -2.892e-08, 0.661613, -0.661613, -3.27768e-08, 0.749846, 0, -1, -4.37114e-08, 29.5207, 56.2584, -6.09007)
 shadow_normal_bias = 1.091
 shadow_transmittance_bias = -7.384
 shadow_blur = 6.354
