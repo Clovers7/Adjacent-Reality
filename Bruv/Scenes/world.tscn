@@ -1,14 +1,15 @@
 [gd_scene load_steps=10 format=3 uid="uid://dsvmso1bipe61"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppvoy"]
-albedo_color = Color(0, 0.654902, 0.113725, 1)
+albedo_color = Color(0, 0.619608, 0.105882, 1)
+metallic = 1.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_akgik"]
 material = SubResource("StandardMaterial3D_ppvoy")
-size = Vector3(60, 0.1, 60)
+size = Vector3(120, 0.1, 120)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_is3sw"]
-points = PackedVector3Array(30.4762, 0.42619, 30.4762, -30.4762, -0.52619, -30.4762, -30.4762, 0.42619, -30.4762, 30.4762, -0.52619, -30.4762, -30.4762, -0.52619, 30.4762, -30.4762, 0.42619, 30.4762, 30.4762, 0.42619, -30.4762, 30.4762, -0.52619, 30.4762)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7p37y"]
+points = PackedVector3Array(60.9524, 0.902381, 60.9524, -60.9524, -1.00238, -60.9524, -60.9524, 0.902381, -60.9524, 60.9524, -1.00238, -60.9524, -60.9524, -1.00238, 60.9524, -60.9524, 0.902381, 60.9524, 60.9524, 0.902381, -60.9524, 60.9524, -1.00238, 60.9524)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2win6"]
 albedo_color = Color(0.929412, 0.929412, 0.929412, 1)
@@ -41,240 +42,462 @@ metallic = 0.32
 mesh = SubResource("BoxMesh_akgik")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground 1"]
-shape = SubResource("ConvexPolygonShape3D_is3sw")
+shape = SubResource("ConvexPolygonShape3D_7p37y")
 
 [node name="Original Walls" type="Node" parent="."]
 
 [node name="Walls" type="CSGCylinder3D" parent="Original Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1662, 2.8081, 24.8885)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.0525, 2.8081, 50.2279)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 10.0
 sides = 6
 material = SubResource("StandardMaterial3D_2win6")
 
 [node name="Wall2" type="CSGCylinder3D" parent="Original Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1145, 0, 25.7527)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1145, 0, 48.5794)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
 material = SubResource("StandardMaterial3D_hj0t8")
 
 [node name="Wall3" type="CSGCylinder3D" parent="Original Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6311, 4.32836, 23.7641)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6311, 4.32836, 48.4154)
 use_collision = true
-radius = 11.8844
+radius = 7.379
 height = 10.0
 material = SubResource("StandardMaterial3D_n7v4d")
 
 [node name="Walls4" type="CSGCylinder3D" parent="Original Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.88742, 4.86378, 25.2002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.77375, 4.86378, 50.5396)
 use_collision = true
-radius = 2.27214
+radius = 7.379
 height = 13.349
 material = SubResource("StandardMaterial3D_ryem6")
 
 [node name="Wall4" type="CSGCylinder3D" parent="Original Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3404, 7.97937, 14.4956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.6208, 7.97937, 51.358)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
+material = SubResource("StandardMaterial3D_754hq")
+
+[node name="Thin_Wall" type="CSGCylinder3D" parent="Original Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.6208, 7.97937, 13.0608)
+use_collision = true
+radius = 3.08194
+height = 27.6543
+material = SubResource("StandardMaterial3D_754hq")
+
+[node name="Thin_Wall2" type="CSGCylinder3D" parent="Original Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.78412, 7.97937, 48.9137)
+use_collision = true
+radius = 3.08194
+height = 27.6543
 material = SubResource("StandardMaterial3D_754hq")
 
 [node name="All Other Walls" type="Node" parent="."]
 
 [node name="Walls2" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6748, 2.8081, 24.8885)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6748, 2.8081, 49.5398)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 10.0
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls3" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.72317, 4.34498, 24.8885)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6095, 4.34498, 50.2279)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 10.0
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls5" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6479, 4.89517, 14.8894)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.2359, 4.51427, 52.8276)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 10.0
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls6" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2805, 4.86378, 7.88011)
-radius = 2.27214
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.8685, 5.6515, 45.8184)
+radius = 7.379
 height = 13.349
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls4" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3387, 3.17423, 14.5618)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3387, 3.17423, 39.2131)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 10.0
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall3" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.3054, 1.48608, 6.15371)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.3054, 1.48608, 50.3713)
 use_collision = true
-radius = 11.8844
+radius = 7.379
 height = 10.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls7" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8473, 6.6147, -5.52169)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8473, 6.6147, 38.6959)
 use_collision = true
-radius = 2.27214
+radius = 7.379
 height = 13.349
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7568, 4.41736, 1.0149)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.3448, 5.20508, 38.9532)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 10.0
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall2" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.2034, 0, -11.0172)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.9994, 0, 26.6815)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls8" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.2494, 4.41736, -17.8872)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.0454, 4.41736, 19.8115)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 10.0
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls9" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3515, 6.16777, -5.84626)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.9395, 2.90388, 32.092)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 12.0
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls10" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7962, 7.54258, 28.6716)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6825, 7.54258, 54.011)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 10.0
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall4" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.4343, 0, 6.86978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0517, 0.787724, 48.6082)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall5" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3275, 0, 14.2658)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.6631, 0, 48.6326)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls11" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2805, -0.516481, -12.8167)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.3629, 0.271243, 25.1215)
 use_collision = true
-radius = 2.27214
+radius = 7.379
 height = 13.349
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall6" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9531, 2.37058, -25.4919)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.5411, 3.1583, 12.4463)
 use_collision = true
-radius = 11.8844
+radius = 7.379
 height = 10.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls12" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.77205, -1.06799, -26.7218)
+transform = Transform3D(0.743192, 0, -0.669079, 0, 1, 0, 0.669079, 0, 0.743192, 36.9218, -1.06799, -35.0939)
 use_collision = true
-radius = 2.27214
+radius = 7.379
 height = 13.349
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall7" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76968, 0, -28.7021)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.9609, 0, 0.678835)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls13" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.58437, 4.41736, -30.6428)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.7756, 4.41736, -1.26186)
 use_collision = true
-radius = 6.49581
+radius = 7.379
 height = 10.0
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls14" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6847, 4.59048, -23.6003)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.4807, 4.59048, 14.0984)
 use_collision = true
-radius = 2.27214
+radius = 7.379
 height = 13.349
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall9" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4678, 0, -27.9187)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.6626, 0, -41.7839)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
 material = SubResource("StandardMaterial3D_hj0t8")
 
 [node name="Wall8" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8106, 4.78041, -27.1701)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.9613, 4.78041, 6.65707)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Walls15" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6081, 3.93845, -27.8993)
-radius = 2.27214
+transform = Transform3D(0.743192, 0, -0.669079, 0, 1, 0, 0.669079, 0, 0.743192, 44.7893, 3.93845, -39.1632)
+radius = 7.379
 height = 13.349
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall10" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.8765, 3.31485, -11.5463)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.8765, 3.31485, 32.6713)
 use_collision = true
-radius = 11.8844
+radius = 7.379
 height = 10.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall11" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.769, -0.552742, -24.8493)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.565, -0.552742, 12.8494)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall12" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.33997, 6.07309, -31.0368)
+transform = Transform3D(0.743192, 0, -0.669079, 0, 1, 0, 0.669079, 0, 0.743192, 39.1023, 6.07309, -48.155)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
 material = SubResource("StandardMaterial3D_ub8x5")
 
 [node name="Wall13" type="CSGCylinder3D" parent="All Other Walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.105215, 6.07309, -31.1824)
+transform = Transform3D(0.743192, 0, -0.669079, 0, 1, 0, 0.669079, 0, 0.743192, 42.388, -0.580057, -24.7014)
 use_collision = true
-radius = 4.85097
+radius = 7.379
 height = 7.0
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Wall14" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.025671, 0, -0.99967, 0, 1, 0, 0.99967, 0, -0.025671, 39.5464, 1.48608, 44.5686)
+use_collision = true
+radius = 7.379
+height = 10.0
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls16" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.025671, 0, -0.99967, 0, 1, 0, 0.99967, 0, -0.025671, 51.3837, 6.6147, 38.4123)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Wall15" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.025671, 0, -0.99967, 0, 1, 0, 0.99967, 0, -0.025671, 57.1746, 3.31485, 47.5932)
+use_collision = true
+radius = 7.379
+height = 10.0
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls17" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.3084, 4.59048, -31.4784)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Wall16" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.7042, 3.31485, -12.9055)
+use_collision = true
+radius = 7.379
+height = 10.0
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls18" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.025671, 0, -0.99967, 0, 1, 0, 0.99967, 0, -0.025671, 57.2115, 6.6147, -7.16443)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls19" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.025671, 0, -0.99967, 0, 1, 0, 0.99967, 0, -0.025671, 43.1623, 6.6147, 27.9548)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls20" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(0.160415, 0, -0.98705, 0, 1, 0, 0.98705, 0, 0.160415, -24.2844, 4.59048, 56.9597)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Wall17" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(0.160415, 0, -0.98705, 0, 1, 0, 0.98705, 0, 0.160415, -44.1574, 3.31485, 50.4592)
+use_collision = true
+radius = 7.379
+height = 10.0
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls21" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.990842, 0, -0.135024, 0, 1, 0, 0.135024, 0, -0.990842, -38.4937, 6.6147, 55.9069)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Wall18" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6479, 4.32835, -53.658)
+use_collision = true
+radius = 7.379
+height = 10.0
+material = SubResource("StandardMaterial3D_n7v4d")
+
+[node name="Walls22" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.60766, 4.34497, -53.5676)
+use_collision = true
+radius = 7.379
+height = 10.0
+sides = 6
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls23" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3555, 3.17422, -44.6925)
+use_collision = true
+radius = 7.379
+height = 10.0
+sides = 6
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls24" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.8641, 6.61469, -45.2097)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls25" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.025671, 0, -0.99967, 0, 1, 0, 0.99967, 0, -0.025671, 47.4005, 6.61469, -45.4933)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls26" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.025671, 0, -0.99967, 0, 1, 0, 0.99967, 0, -0.025671, 39.1791, 6.61469, -55.9508)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Wall19" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.314, 4.32838, -45.134)
+use_collision = true
+radius = 7.379
+height = 10.0
+material = SubResource("StandardMaterial3D_n7v4d")
+
+[node name="Walls27" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.0512, 4.345, -47.7835)
+use_collision = true
+radius = 7.379
+height = 10.0
+sides = 6
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls28" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6064, 3.17425, -54.3363)
+use_collision = true
+radius = 7.379
+height = 10.0
+sides = 6
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls29" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.0978, 6.61472, -54.8536)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls30" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.025671, 0, -0.99967, 0, 1, 0, 0.99967, 0, -0.025671, 4.4386, 6.61472, -55.1371)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls31" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(-0.025671, 0, -0.99967, 0, 1, 0, 0.99967, 0, -0.025671, -7.80659, 6.61472, -54.7377)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Thin_Wall" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.4506, 7.97937, 29.9629)
+use_collision = true
+radius = 3.08194
+height = 27.6543
+material = SubResource("StandardMaterial3D_754hq")
+
+[node name="Thin_Wall2" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9416, 7.97938, -39.6569)
+use_collision = true
+radius = 3.08194
+height = 27.6543
+material = SubResource("StandardMaterial3D_754hq")
+
+[node name="Thin_Wall3" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.6474, 7.97938, -22.2893)
+use_collision = true
+radius = 6.56872
+height = 27.6543
+material = SubResource("StandardMaterial3D_754hq")
+
+[node name="Walls32" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.139, 3.17425, -36.8315)
+use_collision = true
+radius = 20.9309
+height = 10.3384
+sides = 6
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls33" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.968, 5.6515, 0.159065)
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls34" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.4443, 5.20508, -6.70613)
+use_collision = true
+radius = 7.379
+height = 10.0
+sides = 6
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls35" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.4624, 0.271243, -20.5378)
+use_collision = true
+radius = 7.379
+height = 13.349
 material = SubResource("StandardMaterial3D_ub8x5")
