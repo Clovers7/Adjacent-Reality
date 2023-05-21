@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2ih3fydjl2fi"]
+[gd_scene load_steps=7 format=3 uid="uid://c2ih3fydjl2fi"]
 
 [ext_resource type="PackedScene" uid="uid://dsvmso1bipe61" path="res://Scenes/world.tscn" id="1_wcum8"]
-[ext_resource type="PackedScene" uid="uid://bvka5tk3ijs4h" path="res://Scenes/connector.tscn" id="2_p1bfv"]
 [ext_resource type="PackedScene" uid="uid://d1b5yj5sio6d6" path="res://Scenes/player.tscn" id="3_und52"]
 [ext_resource type="PackedScene" uid="uid://nwo6dvu1ikwc" path="res://Scenes/eye.tscn" id="4_6g7h1"]
 
@@ -32,9 +31,6 @@ fog_sky_affect = 0.549
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dx1ex")
-
-[node name="Connector" parent="." instance=ExtResource("2_p1bfv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.158782, -77.8807)
 
 [node name="player" parent="." instance=ExtResource("3_und52")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.556, 1.37805, 17.0821)
