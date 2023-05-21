@@ -8,20 +8,20 @@
 sky_top_color = Color(0.878431, 0, 0.341176, 1)
 sky_horizon_color = Color(0.658824, 0.388235, 0, 1)
 sky_curve = 0.130583
-sky_energy_multiplier = 2.58
+sky_energy_multiplier = 3.5
+sky_cover_modulate = Color(1, 1, 1, 0.0588235)
+ground_bottom_color = Color(0.796078, 0.741176, 0.67451, 1)
 
 [sub_resource type="Sky" id="Sky_x385r"]
 sky_material = SubResource("ProceduralSkyMaterial_nn3q8")
-radiance_size = 1
+radiance_size = 2
 
 [sub_resource type="Environment" id="Environment_dx1ex"]
 background_mode = 2
 sky = SubResource("Sky_x385r")
-ambient_light_source = 3
-ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_source = 2
 ambient_light_sky_contribution = 0.71
-ambient_light_energy = 2.58
-reflected_light_source = 2
+ambient_light_energy = 3.09
 fog_enabled = true
 fog_sky_affect = 0.549
 
@@ -33,7 +33,7 @@ fog_sky_affect = 0.549
 environment = SubResource("Environment_dx1ex")
 
 [node name="player" parent="." instance=ExtResource("3_und52")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.556, 1.37805, 17.0821)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.487, 1.37805, 41.1502)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.707107, 1.28028e-08, -0.707107, 0.707107, -3.09086e-08, 0.707107, -1.28028e-08, -1, -3.09086e-08, -33.2622, 56.2584, -6.09007)
