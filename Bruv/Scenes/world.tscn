@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsvmso1bipe61"]
+[gd_scene load_steps=12 format=3 uid="uid://dsvmso1bipe61"]
 
+[ext_resource type="Texture2D" uid="uid://cul3jn6280lm3" path="res://Images/download.jpg" id="1_6kq7m"]
 [ext_resource type="Texture2D" uid="uid://rpj3txn4fk51" path="res://Images/Brick.png" id="1_ampsq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppvoy"]
-albedo_color = Color(0.729412, 1, 0.717647, 1)
+albedo_texture = ExtResource("1_6kq7m")
 metallic = 1.0
+uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_akgik"]
 material = SubResource("StandardMaterial3D_ppvoy")
@@ -103,6 +105,8 @@ use_collision = true
 radius = 3.08194
 height = 27.6543
 material = SubResource("StandardMaterial3D_754hq")
+
+[node name="All Other Walls 2" type="Node" parent="."]
 
 [node name="All Other Walls" type="Node" parent="."]
 
@@ -532,3 +536,73 @@ radius = 4.86868
 height = 7.88282
 sides = 6
 material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Thin_Wall4" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3202, 7.97938, 19.3911)
+use_collision = true
+radius = 3.08194
+height = 27.6543
+material = SubResource("StandardMaterial3D_754hq")
+
+[node name="Walls37" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.7936, 5.6515, 24.8946)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Wall22" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6935, 3.1583, 11.5663)
+use_collision = true
+radius = 7.379
+height = 10.0
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Walls38" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.8364, 0.271243, -14.2261)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Thin_Wall5" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5874, 7.97938, 31.6896)
+use_collision = true
+radius = 3.08194
+height = 27.6543
+material = SubResource("StandardMaterial3D_754hq")
+
+[node name="Wall23" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3571, 0, 32.3879)
+use_collision = true
+radius = 7.379
+height = 17.1454
+material = SubResource("StandardMaterial3D_ub8x5")
+
+[node name="Thin_Wall6" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.8056, 7.97937, 25.3135)
+use_collision = true
+radius = 3.08194
+height = 27.6543
+material = SubResource("StandardMaterial3D_754hq")
+
+[node name="Walls39" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3907, 4.86378, 12.1603)
+use_collision = true
+radius = 7.379
+height = 13.349
+material = SubResource("StandardMaterial3D_ryem6")
+
+[node name="Thin_Wall7" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.6044, 7.97937, 16.9694)
+use_collision = true
+radius = 3.08194
+height = 27.6543
+material = SubResource("StandardMaterial3D_754hq")
+
+[node name="Wall24" type="CSGCylinder3D" parent="All Other Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2866, 4.32836, 41.7602)
+use_collision = true
+radius = 7.379
+height = 10.0
+material = SubResource("StandardMaterial3D_n7v4d")
